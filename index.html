@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Security Awareness - Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <div class="registration-wrapper form-container active" id="registerSection">
+        <div class="form-box">
+            <h1>Sign Up</h1>
+            <hr>
+            <form id="registerForm">
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first" required>
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="usernameReg">Username</label>
+                <input type="text" id="usernameReg" name="username" required>
+                <label for="passwordReg">Password</label>
+                <input type="password" id="passwordReg" name="password" required>
+                <label for="mobile">Contact Number</label>
+                <input type="text" id="mobile" name="mobile" maxlength="10" required>
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Choose</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+            <div class="footer-box">
+                <p>Already have an account? <a href="#" onclick="showLogin()">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="login-container form-container" id="loginSection">
+        <form id="loginForm" class="login-form">
+            <h2 class="title">Login</h2>
+            <div class="input-group">
+                <input type="text" id="usernameLogin" required>
+                <label for="usernameLogin">Username</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="passwordLogin" required>
+                <label for="passwordLogin">Password</label>
+            </div>
+            <button type="submit" class="btn"><span>Login</span></button>
+            <p class="message" id="loginMessage"></p>
+        </form>
+    </div>
+    <div id="main-portal" class="hidden-content">
+        <header class="site-header">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h2 class="logo-acronym">CSAP</h2>
+                    <p class="logo-fullform">CAUTION • SECURE • ASSESS • PARTICIPATE</p>
+                </div>
+            </div>
+            <h1>Cybersecurity Awareness Portal</h1>
+        </header>
+        <nav class="top-nav">
+            <button class="nav-btn active" data-section-id="home">HOME</button>
+            <button class="nav-btn" data-section-id="about">ABOUT US</button>
+            <button class="nav-btn" data-section-id="cyber">CYBER AWARENESS</button>
+            <button class="nav-btn" data-section-id="learning">LEARNING CORNER</button>
+            <button class="nav-btn" data-section-id="media">MEDIA GALLERY</button>
+            <button class="nav-btn" data-section-id="links">USEFUL LINKS</button>
+            <button class="nav-btn" data-section-id="contact">CONTACT US</button>
+            <button class="nav-btn" data-section-id="help">HELP</button>
+        </nav>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://miro.medium.com/1*-Ccp0sADiRNonCmGXTFH7Q.jpeg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="https://d1umd1ua9snads.cloudfront.net/images/Blog/_bannerWebp/174743/bigstock-Cyber-Security-Concept-Login-464450397.webp" alt="Slide 2">
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="prev" id="prevSlideBtn">&#10094;</button>
+                <button class="next" id="nextSlideBtn">&#10095;</button>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <main id="home">
+                <div class="home-grid">
+                    <section class="crime-card">
+                        <img src="images/one.jpeg"Women/Children Related Fraud"/>
+                        <h2>Women/Children Related Fraud</h2>
+                        <p>Protecting vulnerable groups from online exploitation and abuse</p>
+                        <button class="start-btn" data-module-id="women">Start Module</button>
+                    </section>
+                    <section class="crime-card">
+
+                        <img src="images/two.jpeg"Financial Fraud"/>
+                        <h2>Financial Fraud</h2>
+                        <p>Safeguarding digital transactions and investments</p>
+                        <button class="start-btn" data-module-id="financial">Start Module</button>
+                    </section>
+                    <section class="crime-card">
+                        <img src="images/three.jpeg"Other Cyber Crime"/>
+                        <h2>Other Cyber Crime</h2>
+                        <p>Addressing advanced cyber threats and data security</p>
+                        <button class="start-btn" data-module-id="other">Start Module</button>
+                    </section>
+                </div>
+                <section id="home-learning-corner" class="learning-corner">
+                    <h1>Cybersecurity Learning Corner</h1>
+                    <div class="box-container">
+                        <div class="box" data-section-to-toggle="home-data"><div class="icon">🛡️</div><span>Data Protection</span></div>
+                        <div class="box" data-section-to-toggle="home-password"><div class="icon">🔐</div><span>Password Safety</span></div>
+                        <div class="box" data-section-to-toggle="home-phishing"><div class="icon">🎣</div><span>Phishing</span></div>
+                        <div class="box" data-section-to-toggle="home-browsing"><div class="icon">🌐</div><span>Safe Browsing</span></div>
+                    </div>
+                    <div id="home-data" class="info-section">
+                        <h2>Data Protection</h2>
+                        <p>Data protection forms the foundation of cybersecurity, focusing on safeguarding your most valuable digital assets. In our interconnected world, personal and sensitive information requires multiple layers of security to prevent unauthorized access and data breaches.<br><b>Key Components :</b><br>Encryption: Transform your data into unreadable code that only authorized parties can decode.</br><b> Regular Backups : </b> Create multiple copies of important files stored in secure, separate locations.<br><b>Access Controls :</b> Implement user permissions and authentication systems to limit who can view or modify data.</br><b> Data Audits : </b> Regularly review what information you're storing, who has access, and whether it's still necessary.</br><b>Best Practices:</b> Use full-disk encryption on laptops and mobile devices. Avoid sharing confidential information through unsecured channels like email or messaging apps. Regularly update privacy settings on social media and online accounts. Implement the principle of least privilege - give users only the minimum access they need.</p>
+                    </div>
+                    <div id="home-password" class="info-section">
+                        <h2>Password Safety</h2>
+                        <p>Strong password practices are your first line of defense against unauthorized account access. With cybercriminals using sophisticated tools to crack weak passwords, creating and managing secure credentials has become more critical than ever.<br><b> Password Fundamentals : </b><br><b>Complexity:</b> Use a mix of uppercase letters, lowercase letters, numbers, and special characters. </br><b>Length :</b> Aim for at least 12-16 characters - longer passwords are exponentially harder to crack.<br><b>Uniqueness :</b> Never reuse passwords across multiple accounts.</br><b> Unpredictability : </b> Avoid personal information like birthdays, names, or common words.<br><b>Modern Password Management :</b> Password Managers: Use tools like Bitwarden, 1Password, or LastPass to generate and store unique passwords. </br><b>Two-Factor Authentication (2FA):</b> Add an extra security layer with SMS codes, authenticator apps, or hardware tokens.<br><b>Passphrase Strategy:</b> Consider using memorable phrases with substitutions (e.g., "Coffee&Clouds2024!") </br><b>Regular Updates:</b> Change passwords for sensitive accounts periodically, especially after security breaches.</p>
+                    </div>
+                    <div id="home-phishing" class="info-section">
+                        <h2>Phishing</h2>
+                        <p>Phishing attacks trick users into revealing sensitive information or installing malicious software by impersonating legitimate organizations. These social engineering attacks have become increasingly sophisticated, making awareness and vigilance essential.<br><b>Common Phishing Tactics:</b><br><b>Email Phishing:</b> Fake emails from banks, retailers, or services requesting login credentials or personal information.</br><b>Spear Phishing:</b> Highly targeted attacks using personal information to appear more legitimate.<br><b>Smishing :</b> Phishing via SMS text messages, often claiming urgent account issues.</br><b>Vishing:</b> Voice phishing through phone calls impersonating customer service representatives.<br><b>Recognition Signs:</b> Urgent language demanding immediate action. Generic greetings like "Dear Customer" instead of your name. Suspicious sender addresses or slight misspellings in domain names. Unexpected attachments or links. Requests for sensitive information that legitimate companies wouldn't ask for via email.</br><b>Protection Strategies:</b> Verify sender identity through independent channels before responding. Hover over links to preview destinations without clicking. Use email security features and spam filters. Keep software and browsers updated with latest security patches.</p>
+                    </div>
+                    <div id="home-browsing" class="info-section">
+                        <h2>Safe Browsing</h2>
+                        <p>Safe browsing practices protect you from malicious websites, downloads, and online threats while maintaining your privacy and security across the internet.<br><b>Essential Browsing Security:</b><br><b>HTTPS Verification:</b> Look for the padlock icon and "https://" in the address bar, especially on sites handling personal information.</br><b>Software Updates:</b> Keep browsers, plugins, and operating systems current with security patches.<br><b>Download Caution:</b> Only download software from official sources and verified publishers.</br><b>Ad Blockers:</b> Use reputable ad-blocking extensions to prevent malicious advertisements.<br><b>Privacy Protection:</b> Private Browsing: Use incognito/private modes for sensitive browsing sessions.</br><b>VPN Usage:</b> Consider virtual private networks for additional privacy, especially on public Wi-Fi.<br><b>Cookie Management:</b> Regularly clear cookies and browsing data, adjust privacy settings.</br><b>DNS Security:</b> Use secure DNS services that block known malicious domains.<br><b>Wi-Fi Safety:</b> Avoid conducting sensitive activities on public Wi-Fi networks. Verify network names with establishment staff before connecting. Turn off auto-connect features for Wi-Fi networks. Use mobile hotspots when secure Wi-Fi isn't available.</p>
+                    </div>
+                </section>
+                <section id="home-media-gallery" class="media-gallery-section">
+                    <h1>Cybersecurity Media Gallery</h1>
+                    <div class="gallery">
+                        <div class="media-item">
+                            <h3>Cyber Safety Tips</h3>
+                            <iframe src="https://www.youtube.com/embed/8tR9P4QX82I" allowfullscreen></iframe>
+                        </div>
+                        <div class="media-item social-feed">
+                            <h3>CyberDost Tweet</h3>
+                            <div style="background-color:#e8f4fd; padding:10px; height:250px; border-radius:5px; overflow-y:auto;">
+                                <blockquote class="twitter-tweet" data-theme="light">
+                                    <p lang="hi" dir="ltr">इस बुधवार के <a href="https://twitter.com/hashtag/CyberSafeLive?src=hash&amp;ref_src=twsrc%5Etfw">#CyberSafeLive</a> पर मिलिए श्री अंकुश मिश्रा (डीएसपी, उत्तराखंड पुलिस) से।<br><br>
+                                        जानिए — ऑनलाइन सुरक्षित रहने के तरीके और डिजिटल पेमेंट सुरक्षा के ज़रूरी टिप्स।<br><br>
+                                        लाइव देखें: <a href="https://t.co/ys3XUWqKW1">https://t.co/ys3XUWqKW1</a><br>🗓️ बुधवार | ⏰ शाम 4 बजे<br>
+                                        <a href="https://twitter.com/hashtag/I4C?src=hash&amp;ref_src=twsrc%5Etfw">#I4C</a> <a href="https://twitter.com/hashtag/MHA?src=hash&amp;ref_src=twsrc%5Etfw">#MHA</a> <a href="https://twitter.com/hashtag/CyberDost?src=hash&amp;ref_src=twsrc%5Etfw">#CyberDost</a> <a href="https://twitter.com/hashtag/CyberAwarenessLive?src=hash&amp;ref_src=twsrc%5Etfw">#CyberAwarenessLive</a> <a href="https://t.co/eCgqWvcZHQ">pic.twitter.com/eCgqWvcZHQ</a></p>
+                                    &mdash; CyberDost I4C (@Cyberdost) <a href="https://twitter.com/Cyberdost/status/1958037012432220498?ref_src=twsrc%5Etfw">August 20, 2025</a>
+                                </blockquote>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                        </div>
+                        <div class="media-item">
+                            <h3>Cyber Awareness Wiki</h3>
+                            <iframe src="https://en.wikipedia.org/wiki/Information_Security_Awareness" title="Cyber Awareness Wikipedia" allowfullscreen></iframe>
+                        </div>
+                        <div class="media-item social-feed">
+                            <h3>CyberDost Facebook</h3>
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/CyberDostI4C&tabs=timeline&width=740&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </section>
+                <section id="home-links-section" class="links-section">
+                    <h1>Useful Links</h1>
+                    <div class="link-grid">
+                        <a href="https://cybercrime.gov.in/" target="_blank" class="link-card" id="home-cybercrime-link">
+                            <h2>Cyber Crime Portal</h2>
+                            <p>Report cyber crimes and access resources.</p>
+                        </a>
+                        <a href="https://cytrain.ncrb.gov.in/" target="_blank" class="link-card">
+                            <h2>CyTrain</h2>
+                            <p>Training modules for cybersecurity awareness.</p>
+                        </a>
+                        <a href="https://infosecawareness.in/online-session" target="_blank" class="link-card">
+                            <h2>ISEA</h2>
+                            <p>Information Security Education and Awareness.</p>
+                        </a>
+                        <a href="https://www.mygov.in/" target="_blank" class="link-card">
+                            <h2>MyGov</h2>
+                            <p>Participate in governance and share ideas.</p>
+                        </a>
+                    </div>
+                    <button class="back-btn" data-section-id="links">View All Links &gt;</button>
+                </section>
+            </main>
+            <section id="about" class="nav-content">
+                <h1>About Us</h1>
+                <p>Our mission is to create a safer digital environment by empowering individuals and communities with the knowledge and tools needed to combat cybercrime. We believe that awareness is the first and most crucial step in preventing online threats.</p>
+                <p>This portal is a comprehensive resource designed to educate users on various types of cybercrimes, their legal implications, and effective prevention strategies. We aim to foster a proactive approach to cybersecurity, helping you protect your personal information, financial assets, and digital identity.</p>
+                <p>We are a dedicated team of experts in cybersecurity, law enforcement, and digital forensics. Our goal is to make complex information accessible to everyone, from children and students to professionals and senior citizens. By providing up-to-date information and interactive tools, we strive to build a more cyber-resilient society.</p>
+                <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+            </section>
+            <section id="cyber" class="nav-content">
+                <h1>Cyber Awareness</h1>
+                <p>Cyber awareness is a critical skill in today's digital age. It involves understanding the risks and threats present online and knowing how to protect yourself from them. A high level of cyber awareness can help you avoid common pitfalls and secure your digital life.</p>
+                <ul>
+                    <li>Recognizing phishing attempts</li>
+                    <li>Creating strong, unique passwords</li>
+                    <li>Securing your social media accounts</li>
+                    <li>Using public Wi-Fi safely</li>
+                    <li>Understanding the importance of software updates</li>
+                </ul>
+                <p>By staying informed and vigilant, you can significantly reduce your risk of becoming a victim of cybercrime. Remember, cybersecurity is a shared responsibility, and every action you take contributes to a safer online world for everyone.</p>
+                <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+            </section>
+            <section id="learning" class="nav-content learning-corner">
+                <h1>Cybersecurity Learning Corner</h1>
+                <div class="box-container">
+                    <div class="box" data-section-to-toggle="nav-data"><div class="icon">🛡️</div><span>Data Protection</span></div>
+                    <div class="box" data-section-to-toggle="nav-password"><div class="icon">🔐</div><span>Password Safety</span></div>
+                    <div class="box" data-section-to-toggle="nav-phishing"><div class="icon">🎣</div><span>Phishing</span></div>
+                    <div class="box" data-section-to-toggle="nav-browsing"><div class="icon">🌐</div><span>Safe Browsing</span></div>
+                </div>
+                <div id="nav-data" class="info-section">
+                    <h2>Data Protection</h2>
+                    <p>Data protection forms the foundation of cybersecurity, focusing on safeguarding your most valuable digital assets. In our interconnected world, personal and sensitive information requires multiple layers of security to prevent unauthorized access and data breaches.<br><b>Key Components :</b><br>Encryption: Transform your data into unreadable code that only authorized parties can decode.</br><b> Regular Backups : </b> Create multiple copies of important files stored in secure, separate locations.<br><b>Access Controls :</b> Implement user permissions and authentication systems to limit who can view or modify data.</br><b> Data Audits : </b> Regularly review what information you're storing, who has access, and whether it's still necessary.</br><b>Best Practices:</b> Use full-disk encryption on laptops and mobile devices. Avoid sharing confidential information through unsecured channels like email or messaging apps. Regularly update privacy settings on social media and online accounts. Implement the principle of least privilege - give users only the minimum access they need.</p>
+                </div>
+                <div id="nav-password" class="info-section">
+                    <h2>Password Safety</h2>
+                    <p>Strong password practices are your first line of defense against unauthorized account access. With cybercriminals using sophisticated tools to crack weak passwords, creating and managing secure credentials has become more critical than ever.<br><b> Password Fundamentals : </b><br><b>Complexity:</b> Use a mix of uppercase letters, lowercase letters, numbers, and special characters. </br><b>Length :</b> Aim for at least 12-16 characters - longer passwords are exponentially harder to crack.<br><b>Uniqueness :</b> Never reuse passwords across multiple accounts.</br><b> Unpredictability : </b> Avoid personal information like birthdays, names, or common words.<br><b>Modern Password Management :</b> Password Managers: Use tools like Bitwarden, 1Password, or LastPass to generate and store unique passwords. </br><b>Two-Factor Authentication (2FA):</b> Add an extra security layer with SMS codes, authenticator apps, or hardware tokens.<br><b>Passphrase Strategy:</b> Consider using memorable phrases with substitutions (e.g., "Coffee&Clouds2024!") </br><b>Regular Updates:</b> Change passwords for sensitive accounts periodically, especially after security breaches.</p>
+                </div>
+                <div id="nav-phishing" class="info-section">
+                    <h2>Phishing</h2>
+                    <p>Phishing attacks trick users into revealing sensitive information or installing malicious software by impersonating legitimate organizations. These social engineering attacks have become increasingly sophisticated, making awareness and vigilance essential.<br><b>Common Phishing Tactics:</b><br><b>Email Phishing:</b> Fake emails from banks, retailers, or services requesting login credentials or personal information.</br><b>Spear Phishing:</b> Highly targeted attacks using personal information to appear more legitimate.<br><b>Smishing :</b> Phishing via SMS text messages, often claiming urgent account issues.</br><b>Vishing:</b> Voice phishing through phone calls impersonating customer service representatives.<br><b>Recognition Signs:</b> Urgent language demanding immediate action. Generic greetings like "Dear Customer" instead of your name. Suspicious sender addresses or slight misspellings in domain names. Unexpected attachments or links. Requests for sensitive information that legitimate companies wouldn't ask for via email.</br><b>Protection Strategies:</b> Verify sender identity through independent channels before responding. Hover over links to preview destinations without clicking. Use email security features and spam filters. Keep software and browsers updated with latest security patches.</p>
+                </div>
+                <div id="nav-browsing" class="info-section">
+                    <h2>Safe Browsing</h2>
+                    <p>Safe browsing practices protect you from malicious websites, downloads, and online threats while maintaining your privacy and security across the internet.<br><b>Essential Browsing Security:</b><br><b>HTTPS Verification:</b> Look for the padlock icon and "https://" in the address bar, especially on sites handling personal information.</br><b>Software Updates:</b> Keep browsers, plugins, and operating systems current with security patches.<br><b>Download Caution:</b> Only download software from official sources and verified publishers.</br><b>Ad Blockers:</b> Use reputable ad-blocking extensions to prevent malicious advertisements.<br><b>Privacy Protection:</b> Private Browsing: Use incognito/private modes for sensitive browsing sessions.</br><b>VPN Usage:</b> Consider virtual private networks for additional privacy, especially on public Wi-Fi.<br><b>Cookie Management:</b> Regularly clear cookies and browsing data, adjust privacy settings.</br><b>DNS Security:</b> Use secure DNS services that block known malicious domains.<br><b>Wi-Fi Safety:</b> Avoid conducting sensitive activities on public Wi-Fi networks. Verify network names with establishment staff before connecting. Turn off auto-connect features for Wi-Fi networks. Use mobile hotspots when secure Wi-Fi isn't available.</p>
+                </div>
+                <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+            </section>
+            <section id="media" class="nav-content">
+                <h1>Cybersecurity Media Gallery</h1>
+                <div class="gallery">
+                    <div class="media-item">
+                        <h3>Cyber Safety Tips</h3>
+                        <iframe src="https://www.youtube.com/embed/8tR9P4QX82I" allowfullscreen></iframe>
+                    </div>
+                    <div class="media-item social-feed">
+                        <h3>CyberDost Tweet</h3>
+                        <div style="background-color:#e8f4fd; padding:10px; height:250px; border-radius:5px; overflow-y:auto;">
+                            <blockquote class="twitter-tweet" data-theme="light">
+                                <p lang="hi" dir="ltr">इस बुधवार के <a href="https://twitter.com/hashtag/CyberSafeLive?src=hash&amp;ref_src=twsrc%5Etfw">#CyberSafeLive</a> पर मिलिए श्री अंकुश मिश्रा (डीएसपी, उत्तराखंड पुलिस) से।<br><br>
+                                    जानिए — ऑनलाइन सुरक्षित रहने के तरीके और डिजिटल पेमेंट सुरक्षा के ज़रूरी टिप्स।<br><br>
+                                    लाइव देखें: <a href="https://t.co/ys3XUWqKW1">https://t.co/ys3XUWqKW1</a><br>🗓️ बुधवार | ⏰ शाम 4 बजे<br>
+                                    <a href="https://twitter.com/hashtag/I4C?src=hash&amp;ref_src=twsrc%5Etfw">#I4C</a> <a href="https://twitter.com/hashtag/MHA?src=hash&amp;ref_src=twsrc%5Etfw">#MHA</a> <a href="https://twitter.com/hashtag/CyberDost?src=hash&amp;ref_src=twsrc%5Etfw">#CyberDost</a> <a href="https://twitter.com/hashtag/CyberAwarenessLive?src=hash&amp;ref_src=twsrc%5Etfw">#CyberAwarenessLive</a> <a href="https://t.co/eCgqWvcZHQ">pic.twitter.com/eCgqWvcZHQ</a></p>
+                                &mdash; CyberDost I4C (@Cyberdost) <a href="https://twitter.com/Cyberdost/status/1958037012432220498?ref_src=twsrc%5Etfw">August 20, 2025</a>
+                            </blockquote>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </div>
+                    <div class="media-item">
+                        <h3>Cyber Awareness Wiki</h3>
+                        <iframe src="https://en.wikipedia.org/wiki/Information_Security_Awareness" title="Cyber Awareness Wikipedia" allowfullscreen></iframe>
+                    </div>
+                    <div class="media-item social-feed">
+                        <h3>CyberDost Facebook</h3>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/CyberDostI4C&tabs=timeline&width=740&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+            </section>
+            <section id="contact" class="nav-content">
+                <h1>Contact Us</h1>
+                <p>If you have questions, feedback, or need assistance, please feel free to reach out to us. Your safety and security are our top priorities, and we are here to help.</p>
+                <p>For urgent matters related to cybercrime, we recommend contacting your local law enforcement or national cybercrime reporting agencies. In India, you can report cybercrime incidents on the official Cybercrime.gov.in portal.</p>
+                <ul>
+                    <li>Email: contact@cyberaware.com</li>
+                    <li>Contact no : 1930</li>
+                    <li>Social Media: @CyberSafetyPortal</li>
+                </ul>
+                <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+            </section>
+            <section id="help" class="nav-content">
+                <h1>Help</h1>
+                <p>Welcome to the Help section of our portal. This page is designed to assist you in navigating the website and understanding its features. If you are a victim of cybercrime, here are the immediate steps you should take:</p>
+                <ol>
+                    <li>Do not panic. Keep calm and do not delete any evidence.</li>
+                    <li>Document everything. Take screenshots of messages, emails, or websites related to the crime.</li>
+                    <li>Report the incident. File a complaint with the cybercrime authorities. In India, you can use the National Cyber Crime Reporting Portal at <a href="https://cybercrime.gov.in" target="_blank">cybercrime.gov.in</a>.</li>
+                    <li>Secure your accounts. Change all your passwords, especially for compromised accounts. Enable two-factor authentication (2FA) wherever possible.</li>
+                    <li>Inform your bank. If the crime involves financial fraud, contact your bank immediately to block your accounts and cards.</li>
+                </ol>
+                <p>For general inquiries about our portal, please refer to the About Us and Cyber Awareness sections, or contact us directly.</p>
+                <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+            </section>
+            <section id="links" class="nav-content links-section">
+                <h1>Useful Links</h1>
+                <div class="link-grid">
+                    <a href="https://cybercrime.gov.in/" target="_blank" class="link-card" id="main-links-cybercrime-link">
+                        <h2>Cyber Crime Portal</h2>
+                        <p>Report cyber crimes and access resources.</p>
+                    </a>
+                    <a href="https://cytrain.ncrb.gov.in/" target="_blank" class="link-card">
+                        <h2>CyTrain</h2>
+                        <p>Training modules for cybersecurity awareness.</p>
+                    </a>
+                    <a href="https://infosecawareness.in/online-session" target="_blank" class="link-card">
+                        <h2>ISEA</h2>
+                        <p>Information Security Education and Awareness.</p>
+                    </a>
+                    <a href="https://www.mygov.in/" target="_blank" class="link-card">
+                        <h2>MyGov</h2>
+                        <p>Participate in governance and share ideas.</p>
+                    </a>
+                    <a href="https://www.digitalindia.gov.in/" target="_blank" class="link-card">
+                        <h2>Digital India</h2>
+                        <p>Empowering citizens through digital initiatives.</p>
+                    </a>
+                    <a href="https://www.cert-in.org.in/" target="_blank" class="link-card">
+                        <h2>CERT-In</h2>
+                        <p>National agency for cybersecurity incident response.</p>
+                    </a>
+                </div>
+                <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+            </section>
+            <section id="women" class="content">
+                <h1>Women/Children Related Cyber Crime</h1>
+                <div class="subcategory">
+                    <h3>1.1 Online Child Exploitation and Abuse</h3>
+                    <p>Children as young as 8-12 are being targeted through gaming platforms and social media. Dark web networks facilitate international trafficking of child abuse material.</p>
+                    <ul>
+                        <li>Section 67B IT Act – Child pornography</li>
+                        <li>Section 67A IT Act – Sexually explicit material</li>
+                        <li>Section 354A IPC – Sexual harassment</li>
+                        <li>Section 354C IPC – Voyeurism</li>
+                        <li>Section 66E IT Act – Violation of privacy</li>
+                        <li>Section 66F IT Act – Cyber terrorism</li>
+                    </ul>
+                </div>
+                <div class="subcategory">
+                    <h3>1.2 Cyberbullying and Harassment of Women</h3>
+                    <div class="stats-highlight">70% of Indian women report receiving unsolicited explicit content on social platforms</div>
+                    <p>Deepfake technology being used to create non-consensual intimate images of women.</p>
+                    <ul>
+                        <li>Section 354D IPC – Stalking</li>
+                        <li>Section 509 IPC – Insulting modesty of women</li>
+                        <li>Section 503 IPC – Criminal intimidation</li>
+                        <li>Section 506 IPC – Punishment for criminal intimidation</li>
+                        <li>Section 507 IPC – Criminal intimidation by anonymous communication</li>
+                        <li>Section 67 IT Act – Publishing or transmitting obscene material</li>
+                    </ul>
+                </div>
+                <div class="subcategory">
+                    <h3>1.3 Online Human Trafficking</h3>
+                    <p>Social media platforms used to lure vulnerable women and children with fake job promises. Cross-border trafficking operations coordinated through encrypted messaging apps.</p>
+                    <ul>
+                        <li>Section 378 IPC – Theft</li>
+                        <li>Section 415 IPC – Cheating</li>
+                        <li>Section 416 IPC – Cheating by personation</li>
+                        <li>Section 420 IPC – Cheating and dishonestly inducing delivery of property</li>
+                        <li>Section 66C IT Act – Identity theft</li>
+                        <li>Section 66D IT Act – Cheating by personation using computer resource</li>
+                    </ul>
+                </div>
+                <div class="subcategory">
+                    <h3>1.4 Sextortion and Blackmail</h3>
+                    <p>Victims often coerced into sending intimate photos which are later used for extortion. Many cases involve minors being blackmailed by adults posing as peers online.</p>
+                    <ul>
+                        <li>Section 383 IPC – Extortion</li>
+                        <li>Section 384 IPC – Punishment for extortion</li>
+                        <li>Section 385 IPC – Putting person in fear of injury to commit extortion</li>
+                        <li>Section 403 IPC – Dishonest misappropriation of property</li>
+                        <li>Section 405 IPC – Criminal breach of trust</li>
+                        <li>Section 66 IT Act – Computer related offences</li>
+                    </ul>
+                </div>
+                <div class="general-info">
+                    <h2>General Information</h2>
+                    <p>Women and children are often targeted in cyber crimes such as online harassment, cyber stalking, child pornography, exploitation, and blackmail. These crimes can cause severe emotional and psychological harm.</p>
+                    <h2>Common Examples</h2>
+                    <ul>
+                        <li>Cyber stalking and online harassment of women</li>
+                        <li>Child sexual abuse material (CSAM) shared online</li>
+                    </ul>
+                </div>
+                <div class="button-container">
+                    <button class="survey-btn" data-module-id="women">Start Survey</button>
+                    <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+                </div>
+            </section>
+            <section id="financial" class="content">
+                <h1>Financial Fraud</h1>
+                <div class="subcategory">
+                    <h3>2.1 Online Banking Fraud</h3>
+                    <p>Phishing attacks targeting bank credentials are on the rise, leading to unauthorized transactions. Malware and trojans steal banking information from compromised devices.</p>
+                    <ul>
+                        <li>Section 66C IT Act – Identity theft</li>
+                        <li>Section 66D IT Act – Cheating by personation using computer resource</li>
+                        <li>Section 420 IPC – Cheating and dishonestly inducing delivery of property</li>
+                    </ul>
+                </div>
+                <div class="subcategory">
+                    <h3>2.2 Investment and Loan Scams</h3>
+                    <div class="stats-highlight">Victims lose an average of ₹50,000 per investment scam in India</div>
+                    <p>Fake investment schemes promoted on social media and messaging apps promise high returns. Fraudulent loan offers require upfront processing fees that are never returned.</p>
+                    <ul>
+                        <li>Section 415 IPC – Cheating</li>
+                        <li>Section 420 IPC – Cheating and dishonestly inducing delivery of property</li>
+                    </ul>
+                </div>
+                <div class="subcategory">
+                    <h3>2.3 Credit Card Fraud</h3>
+                    <p>Skimming devices at ATMs and POS machines capture card details. Phishing websites mimic legitimate online stores to steal credit card information.</p>
+                    <ul>
+                        <li>Section 66C IT Act – Identity theft</li>
+                        <li>Section 66D IT Act – Cheating by personation using computer resource</li>
+                        <li>Section 420 IPC – Cheating and dishonestly inducing delivery of property</li>
+                    </ul>
+                </div>
+                <div class="general-info">
+                    <h2>General Information</h2>
+                    <p>Financial cyber crimes encompass various illicit activities designed to steal money or financial information. These include online banking fraud, credit card fraud, investment scams, and phishing attacks targeting financial institutions.</p>
+                    <h2>Common Examples</h2>
+                    <ul>
+                        <li>Phishing emails impersonating banks</li>
+                        <li>Fraudulent investment schemes</li>
+                        <li>Online loan scams</li>
+                    </ul>
+                </div>
+                <div class="button-container">
+                    <button class="survey-btn" data-module-id="financial">Start Survey</button>
+                    <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+                </div>
+            </section>
+            <section id="other" class="content">
+                <h1>Other Cyber Crime</h1>
+                <div class="subcategory">
+                    <h3>3.1 Hacking and Data Breaches</h3>
+                    <p>State-sponsored hacking groups target critical infrastructure. Ransomware attacks encrypt organizational data and demand cryptocurrency for release.</p>
+                    <ul>
+                        <li>Section 43 IT Act – Penalty for damage to computer etc.</li>
+                        <li>Section 66 IT Act – Computer related offences</li>
+                        <li>Section 66F IT Act – Cyber terrorism</li>
+                    </ul>
+                </div>
+                <div class="subcategory">
+                    <h3>3.2 Cyber Stalking and Online Defamation</h3>
+                    <div class="stats-highlight">Over 60% of cyber stalking victims experience psychological distress</div>
+                    <p>Persistent online harassment and monitoring of individuals across multiple platforms. Publication of false and damaging information to harm reputation.</p>
+                    <ul>
+                        <li>Section 354D IPC – Stalking</li>
+                        <li>Section 500 IPC – Punishment for defamation</li>
+                        <li>Section 509 IPC – Insulting modesty of women</li>
+                        <li>Section 503 IPC – Criminal intimidation</li>
+                        <li>Section 506 IPC – Punishment for criminal intimidation</li>
+                        <li>Section 507 IPC – Criminal intimidation by anonymous communication</li>
+                    </ul>
+                </div>
+                <div class="subcategory">
+                    <h3>3.3 Digital Piracy and Copyright Infringement</h3>
+                    <p>Illegal distribution of copyrighted movies, music, and software through torrents and streaming sites. Counterfeit goods sold online infringe on intellectual property rights.</p>
+                    <ul>
+                        <li>Section 65 IT Act – Tampering with computer source documents</li>
+                        <li>The Copyright Act, 1957</li>
+                    </ul>
+                </div>
+                <div class="general-info">
+                    <h2>General Information</h2>
+                    <p>This category covers a wide range of cyber crimes not specific to women, children, or financial fraud. These include hacking, data breaches, cyber stalking, online defamation, digital piracy, and other advanced cyber threats.</p>
+                    <h2>Common Examples</h2>
+                    <ul>
+                        <li>Website defacement and hacking</li>
+                        <li>Spread of malicious software (malware, viruses)</li>
+                        <li>Identity theft and impersonation</li>
+                    </ul>
+                </div>
+                <div class="button-container">
+                    <button class="survey-btn" data-module-id="other">Start Survey</button>
+                    <button class="back-btn" data-back-to-home>⬅ Back to Home</button>
+                </div>
+            </section>
+            <section id="survey-container" class="survey-container">
+                <h1>Cybersecurity Awareness Survey</h1>
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading survey, please wait...</p>
+                </div>
+                <iframe id="survey-iframe" class="form-iframe" frameborder="0"></iframe>
+                <button class="survey-back-btn" data-back-from-survey>⬅ Back to Module</button>
+            </section>
+        </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
